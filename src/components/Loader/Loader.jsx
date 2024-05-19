@@ -1,12 +1,12 @@
 import { Audio } from "react-loader-spinner";
-
+import css from "./Loader.module.css";
 const Loader = () => (
-  <div>
+  <div className={css.loaderContainer}>
     <Audio
-      height="80"
-      width="80"
+      height="120"
+      width="150"
       radius="9"
-      color="green"
+      color="tomato"
       ariaLabel="loading"
     />
     <p>Loading data, please wait...</p>

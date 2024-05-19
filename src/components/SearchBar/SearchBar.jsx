@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { CiSearch } from "react-icons/ci";
 import toast, { Toaster } from "react-hot-toast";
-
+import css from "../SearchBar/SearchBar.module.css";
 const SearchBar = ({ onSearch }) => {
   const [inputValue, setInputValue] = useState("");
 
@@ -20,15 +21,19 @@ const SearchBar = ({ onSearch }) => {
   return (
     <header>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={inputValue}
-          onChange={handleInputChange}
-          autoComplete="off"
-          autoFocus
-          placeholder="Search images and photos"
-        />
-        <button type="submit">Search</button>
+        <div className={css.inputStyle}>
+          <button type="submit" className={css.serachBtn}>
+            <CiSearch />
+          </button>
+          <input
+            type="text"
+            value={inputValue}
+            onChange={handleInputChange}
+            autoComplete="off"
+            autoFocus
+            placeholder="Search images and photos"
+          />
+        </div>
       </form>
       <Toaster /> {/* This will render the toast notifications */}
     </header>

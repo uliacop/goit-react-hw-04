@@ -1,6 +1,11 @@
 .btnLoad {
   background-color: #9c997c;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px 20px;
 }
+
 .btnStyle {
   display: flex;
   justify-content: center;
