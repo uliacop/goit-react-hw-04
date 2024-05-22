@@ -2,9 +2,9 @@ import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import toast, { Toaster } from "react-hot-toast";
 import css from "../SearchBar/SearchBar.module.css";
+
 const SearchBar = ({ onSearch }) => {
   const [inputValue, setInputValue] = useState("");
-
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
